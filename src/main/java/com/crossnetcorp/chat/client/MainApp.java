@@ -17,7 +17,9 @@ public class MainApp {
         //
 
         // Paso 3: Ralizar la petición (request / response)
-        PingResponse response = llmStub.ping(PingRequest.newBuilder().setName("Caja Cusco").build());
+        System.out.println("Iniciando llamada remota ...");
+        PingResponse response = llmStub.ping(PingRequest.newBuilder().setName("Caja Cusco - Curso ARQ003").build());
+        System.out.println("Recibiendo respuesta ...");
         System.out.println(response.getResponse());
 
         // Paso 4: Cerrar el canal
